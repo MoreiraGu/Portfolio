@@ -54,5 +54,19 @@
     "nome": "Trabalho em Equipe",
     "descricao": "Capacidade de colaborar efetivamente em projetos coletivos.",
     "icone": "team"
+  },
+ {
+    "id": 7,
+    "tipo": "interpessoal",
+    "nome": "Proatividade",
+    "descricao": "Interesse e pré disposição para execução de tarefas",
+    "icone": "team"
+ },
+  {
+    "id": 8,
+    "tipo": "interpessoal",
+    "nome": "Organização",
+    "descricao": "Cuidado e controle contínuo de tarefas e ambiente",
+    "icone": "team"
   }
 ]
