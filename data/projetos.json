@@ -3,7 +3,14 @@
     "id": 1,
     "nome": "Portfolio Pessoal",
     "descricao": "Site para exibir meu portfólio, cursos, projetos e competências.",
-    "tecnologias": ["HTML", "CSS", "JavaScript", "Node.js", "Express", "EJS"],
+    "tecnologias": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Node.js",
+      "Express",
+      "EJS"
+    ],
     "link": "https://gustavo-moreira.vercel.app/",
     "link_repositorio": "https://github.com/MoreiraGu/portfolio"
   },
@@ -11,8 +18,12 @@
     "id": 2,
     "nome": "Sistema de Notas",
     "descricao": "Aplicação para gerenciamento de notas de alunos em Java.",
-    "tecnologias": ["Java", "Swing", "MySQL"],
-    "link": "",
+    "tecnologias": [
+      "Java",
+      "Swing",
+      "MySQL"
+    ],
+    "link": "https://github.com/MoreiraGu/Sistema_Alunos_Cursos",
     "link_repositorio": "https://github.com/MoreiraGu/sistema-notas"
   }
 ]

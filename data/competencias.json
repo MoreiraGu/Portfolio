@@ -2,12 +2,13 @@
   {
     "id": 1,
     "tipo": "tecnica",
-    "categoria": "Programação",
+    "categoria": "Front-end",
     "habilidades": [
-      "Java",
+      "HTML",
+      "CSS",
       "JavaScript",
-      "Python",
-      "SQL"
+      "TypeScript",
+      "React"
     ]
   },
   {
@@ -16,5 +17,15 @@
     "nome": "Trabalho em Equipe",
     "descricao": "Capacidade de colaborar efetivamente em projetos coletivos.",
     "icone": "team"
+  },
+  {
+    "tipo": "tecnica",
+    "categoria": "Back-end",
+    "habilidades": [
+      "Python",
+      "Java",
+      "SQL"
+    ],
+    "id": 3
   }
 ]
