@@ -11,19 +11,27 @@
       "Express",
       "EJS"
     ],
-    "link": "https://gustavo-moreira.vercel.app/",
-    "link_repositorio": "https://github.com/MoreiraGu/portfolio"
+    "link": "https://gustavo-moreira.vercel.app/"
   },
   {
     "id": 2,
-    "nome": "Sistema de Notas",
-    "descricao": "Aplicação para gerenciamento de notas de alunos em Java.",
+    "nome": "Sistema de Alunos e Cursos",
+    "descricao": "Aplicação para gerenciamento de alunos e cursos em uma instituição.",
     "tecnologias": [
       "Java",
-      "Swing",
       "MySQL"
+    ]
+  },
+    {
+    "id": 3,
+    "nome": "MediControl",
+    "descricao": "Aplicação para controle e gerenciamento de medicações.",
+    "tecnologias": [
+      "Java",
+      "FlatLaf",
+      "MySQL",
+      "jCalendar"
     ],
-    "link": "https://github.com/MoreiraGu/Sistema_Alunos_Cursos",
-    "link_repositorio": "https://github.com/MoreiraGu/sistema-notas"
+    "link": "https://github.com/MoreiraGu/MediControl"
   }
 ]
