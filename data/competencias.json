@@ -13,19 +13,46 @@
   },
   {
     "id": 2,
+    "tipo": "tecnica",
+    "categoria": "Back-end",
+    "habilidades": [
+      "Java",
+      "Python"
+
+    ]
+  },
+  {
+    "id": 3,
+    "tipo": "tecnica",
+    "categoria": "Dados",
+    "habilidades": [
+      "SQL",
+      "MySQL"
+    ]
+  },
+  {
+    "id": 4,
+    "tipo": "tecnica",
+    "categoria": "Versionamento",
+    "habilidades": [
+      "Git",
+      "GitHub"
+    ]
+  },
+  {
+    "id": 5,
+    "tipo": "tec_ferramenta",
+    "categoria": "Ferramentas",
+    "habilidades": [
+      "VS Code",
+      "Postman"
+    ]
+  },
+  {
+    "id": 6,
     "tipo": "interpessoal",
     "nome": "Trabalho em Equipe",
     "descricao": "Capacidade de colaborar efetivamente em projetos coletivos.",
     "icone": "team"
-  },
-  {
-    "tipo": "tecnica",
-    "categoria": "Back-end",
-    "habilidades": [
-      "Python",
-      "Java",
-      "SQL"
-    ],
-    "id": 3
   }
 ]
