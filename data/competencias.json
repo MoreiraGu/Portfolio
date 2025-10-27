@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "tipo": "tecnica",
+    "categoria": "Programação",
+    "habilidades": [
+      "Java",
+      "JavaScript",
+      "Python",
+      "SQL"
+    ]
+  },
+  {
+    "id": 2,
+    "tipo": "interpessoal",
+    "nome": "Trabalho em Equipe",
+    "descricao": "Capacidade de colaborar efetivamente em projetos coletivos.",
+    "icone": "team"
+  }
+]

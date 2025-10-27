@@ -1,0 +1,80 @@
+--- dadosBasicos.json ---
+{
+  "nomeCompleto": "Gustavo Moreira",
+  "cargo": "Desenvolvedor",
+  "email": "gustavo@email.com",
+  "telefone": "123456789",
+  "localizacao": "São José dos Campos, SP",
+  "biografia": "Sou estudante de ADS e desenvolvedor em Node.js.",
+  "foto_url": "/img/minha-foto.jpg"
+}
+
+--- cursos.json ---
+[
+  {
+    "id": 1,
+    "tipo": "academico",
+    "nome": "Análise e Desenvolvimento de Sistemas",
+    "instituicao": "Fatec Jessen Vidal",
+    "periodo": "2024 -",
+    "descricao": "Formação sólida em fundamentos de computação, estruturas de dados, algoritmos e desenvolvimento de sistemas.",
+    "tags": []
+  },
+  {
+    "id": 2,
+    "tipo": "complementar",
+    "nome": "Curso de JavaScript Avançado",
+    "instituicao": "Udemy",
+    "periodo": "2025",
+    "descricao": "Aprendizado de conceitos avançados de JavaScript e Node.js.",
+    "tags": ["JavaScript", "Node.js"],
+    "link": "https://www.udemy.com/certificate/abc123"
+  }
+]
+
+--- projetos.json ---
+[
+  {
+    "id": 1,
+    "nome": "Portfolio Pessoal",
+    "descricao": "Site para exibir meu portfólio, cursos, projetos e competências.",
+    "tecnologias": ["HTML", "CSS", "JavaScript", "Node.js", "Express", "EJS"],
+    "link": "http://meu-portfolio.com",
+    "link_repositorio": "https://github.com/gustavo/portfolio"
+  },
+  {
+    "id": 2,
+    "nome": "Sistema de Notas",
+    "descricao": "Aplicação para gerenciamento de notas de alunos em Java.",
+    "tecnologias": ["Java", "Swing", "MySQL"],
+    "link": "",
+    "link_repositorio": "https://github.com/gustavo/sistema-notas"
+  }
+]
+
+--- competencias.json ---
+[
+  {
+    "id": 1,
+    "tipo": "tecnica",
+    "categoria": "Programação",
+    "habilidades": ["Java", "JavaScript", "Python", "SQL"]
+  },
+  {
+    "id": 2,
+    "tipo": "interpessoal",
+    "nome": "Trabalho em Equipe",
+    "descricao": "Capacidade de colaborar efetivamente em projetos coletivos.",
+    "icone": "team"
+  }
+]
+
+--- redesSociais.json ---
+{
+  "linkedin_url": "https://www.linkedin.com/in/gustavo",
+  "linkedin_username": "gustavo",
+  "github_url": "https://github.com/gustavo",
+  "github_username": "gustavo",
+  "lattes_url": "http://lattes.cnpq.br/123456789",
+  "portfolio_url": "http://meu-portfolio.com"
+}

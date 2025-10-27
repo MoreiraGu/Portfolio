@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "tipo": "academico",
+    "nome": "Análise e Desenvolvimento de Sistemas",
+    "instituicao": "Fatec Jessen Vidal",
+    "periodo": "Agosto/2024 - Jul/2027",
+    "descricao": "Formação sólida em fundamentos de computação, estruturas de dados, algoritmos e desenvolvimento de sistemas.",
+    "tags": []
+  },
+  {
+    "id": 2,
+    "tipo": "complementar",
+    "nome": "Curso de Inglês",
+    "instituicao": "The Family Idiomas",
+    "periodo": "Jan/2020 - Dez/2022",
+    "descricao": "Aprimoramento nas habilidades na língua inglesa, tendo alcançado nível B2.",
+    "tags": ["Inglês"]
+  }
+]

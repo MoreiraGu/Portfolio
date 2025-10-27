@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= dadosBasicos.nomeCompleto %> - Portfólio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1><%= dadosBasicos.nomeCompleto %></h1>
+  <nav>
+    <a href="#apresentacao">Início</a>
+    <a href="#formacao">Formação</a>
+    <a href="#certificacoes">Certificações</a>
+    <a href="#projetos">Projetos</a>
+    <a href="#competencias">Habilidades</a>
+    <a href="#redes">Contato</a>
+  </nav>
+</header>
+
+<main>
+  <!-- Apresentação -->
+  <section id="apresentacao">
+    <img src="/img/fotogustavo.jpg" alt="Minha Foto">
+    <h1><%= dadosBasicos.nomeCompleto %></h1>
+    <h3><%= dadosBasicos.cargo %></h3>
+    <p><strong>Email:</strong> <%= dadosBasicos.email %></p>
+    <p><strong>Telefone:</strong> <%= dadosBasicos.telefone %></p>
+    <p><strong>Localização:</strong> <%= dadosBasicos.localizacao %></p>
+    <p class="biografia-texto"><strong>Biografia:</strong> <%= dadosBasicos.biografia %></p>
+  </section>
+
+  <!-- Formação Acadêmica -->
+  <section id="formacao">
+    <h2>Formação Acadêmica</h2>
+    <div class="card-container">
+      <% cursos.filter(c => c.tipo === 'academico').forEach(c => { %>
+        <div class="card">
+          <h3><%= c.nome %> - <%= c.instituicao %></h3>
+          <p><strong>Período:</strong> <%= c.periodo %></p>
+          <p><%= c.descricao %></p>
+        </div>
+      <% }) %>
+    </div>
+  </section>
+
+  <!-- Cursos e Certificações -->
+  <section id="certificacoes">
+    <h2>Cursos e Certificações</h2>
+    <div class="card-container">
+      <% cursos.filter(c => c.tipo === 'complementar').forEach(c => { %>
+        <div class="card">
+          <h3><%= c.nome %> - <%= c.instituicao %></h3>
+          <p><strong>Duração/Período:</strong> <%= c.periodo %></p>
+          <p><%= c.descricao %></p>
+          <% if (c.tags && c.tags.length) { %>
+            <div class="tag-container">
+              <% c.tags.forEach(tag => { %>
+                <span class="tag"><%= tag %></span>
+              <% }) %>
+            </div>
+          <% } %>
+          <% if (c.link) { %>
+            <a href="<%= c.link %>" target="_blank">Ver certificado</a>
+          <% } %>
+        </div>
+      <% }) %>
+    </div>
+  </section>
+
+  <!-- Projetos -->
+ <section id="projetos">
+  <h2>Projetos</h2>
+  <div class="card-container">
+    <% projetos.forEach(p => { %>
+      <div class="card">
+        <h3><%= p.nome %></h3>
+        <p><%= p.descricao %></p>
+
+        <% if (p.tecnologias && p.tecnologias.length) { %>
+          <div class="tag-container">
+            <span class="tag-label">Tecnologias:</span>
+            <% p.tecnologias.forEach(t => { %>
+              <span class="tag"><%= t %></span>
+            <% }) %>
+          </div>
+        <% } %>
+
+        <% if (p.link) { %>
+          <a href="<%= p.link %>" target="_blank">Ver projeto</a>
+        <% } else if (p.link_repositorio) { %>
+          <a href="<%= p.link_repositorio %>" target="_blank">Ver código</a>
+        <% } %>
+      </div>
+    <% }) %>
+  </div>
+</section>
+
+  <!-- Competências -->
+  <section id="competencias">
+    <h2>Competências Técnicas</h2>
+    <div class="card-container">
+      <% competencias.filter(c => c.tipo === 'tecnica').forEach(c => { %>
+        <div class="card">
+          <h3><%= c.categoria %></h3>
+          <div class="tag-container">
+            <% c.habilidades.forEach(h => { %>
+              <span class="tag"><%= h.trim() %></span>
+            <% }) %>
+          </div>
+        </div>
+      <% }) %>
+    </div>
+
+    <h2>Competências Interpessoais</h2>
+    <div class="card-container">
+      <% competencias.filter(c => c.tipo === 'interpessoal').forEach(c => { %>
+        <div class="card">
+          <h3><%= c.nome %></h3>
+          <p><%= c.descricao %></p>
+        </div>
+      <% }) %>
+    </div>
+  </section>
+
+  <!-- Redes Sociais -->
+  <section id="redes">
+    <h2>Redes Sociais</h2>
+    <div class="social-links">
+      <% if (redesSociais.linkedin_url) { %>
+        <a href="<%= redesSociais.linkedin_url %>" target="_blank" aria-label="LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      <% } %>
+      <% if (redesSociais.github_url) { %>
+        <a href="<%= redesSociais.github_url %>" target="_blank" aria-label="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+      <% } %>
+      <% if (redesSociais.lattes_url) { %>
+        <a href="<%= redesSociais.lattes_url %>" target="_blank" aria-label="Currículo Lattes">
+          <i class="fas fa-file-alt"></i>
+        </a>
+      <% } %>
+      <% if (redesSociais.portfolio_url) { %>
+        <a href="<%= redesSociais.portfolio_url %>" target="_blank" aria-label="Portfólio">
+          <i class="fas fa-globe"></i>
+        </a>
+      <% } %>
+    </div>
+    <p style="margin-top: 15px; font-size: 0.9em; color: var(--text-medium);">Conecte-se comigo e confira meu trabalho!</p>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; <%= new Date().getFullYear() %> <%= dadosBasicos.nomeCompleto %>. Todos os direitos reservados.</p>
+</footer>
+
+</body>
+</html>
