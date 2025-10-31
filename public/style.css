@@ -54,10 +54,30 @@ header {
   box-shadow: 0 3px 15px rgba(0,0,0,0.4);
 }
 
+/* Logo */
 header h1 {
   font-size: 1.8em;
   color: var(--primary-color);
   letter-spacing: 0.5px;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+nav ul li a {
+  color: var(--text-light);
+  font-weight: 600;
+  padding: 8px 14px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: var(--primary-color);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 12px rgba(0,123,255,0.4);
 }
 
 nav a {
@@ -73,6 +93,75 @@ nav a:hover {
   background-color: var(--primary-color);
   transform: translateY(-3px);
   box-shadow: 0 5px 12px rgba(0,123,255,0.4);
+}
+
+/* Hamburger - mobile */
+/* Hamburger - mobile */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  width: 25px;
+  background: var(--primary-color);
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+/* Mobile nav */
+@media (max-width: 768px) {
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 15px 20px;
+  }
+
+  nav ul {
+    position: fixed;
+    top: 65px;
+    right: -100%;
+    width: 70%;
+    height: 100vh;
+    background-color: var(--bg-card);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 50px 20px;
+    gap: 25px;
+    transition: right 0.3s ease;
+    box-shadow: -3px 0 15px rgba(0,0,0,0.5);
+  }
+
+  nav ul li a {
+    font-size: 1.2em;
+    width: 100%;
+  }
+
+  nav ul.show {
+    right: 0;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  /* Hamburger animation */
+  .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
 }
 
 /* Main */

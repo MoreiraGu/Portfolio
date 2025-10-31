@@ -13,12 +13,21 @@
 <header>
   <h1><%= dadosBasicos.nomeCompleto %></h1>
   <nav>
-    <a href="#apresentacao">Início</a>
-    <a href="#formacao">Formação</a>
-    <a href="#certificacoes">Certificações</a>
-    <a href="#projetos">Projetos</a>
-    <a href="#competencias">Habilidades</a>
-    <a href="#redes">Contato</a>
+    <!-- Hamburger -->
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <!-- Links -->
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#apresentacao">Início</a></li>
+      <li><a href="#formacao">Formação</a></li>
+      <li><a href="#certificacoes">Certificações</a></li>
+      <li><a href="#projetos">Projetos</a></li>
+      <li><a href="#competencias">Habilidades</a></li>
+      <li><a href="#redes">Contato</a></li>
+    </ul>
   </nav>
 </header>
 
@@ -181,6 +190,23 @@
   flipContainer.addEventListener('click', () => {
     flipCard.classList.toggle('active');
   });
+</script>
+<script>
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('nav-links');
+
+hamburger.addEventListener('click', () => {
+  navLinks.classList.toggle('show');
+  hamburger.classList.toggle('active');
+});
+
+// Fecha o menu ao clicar em um link
+document.querySelectorAll('#nav-links a').forEach(link => {
+  link.addEventListener('click', () => {
+    navLinks.classList.remove('show');
+    hamburger.classList.remove('active');
+  });
+});
 </script>
 
 </body>
