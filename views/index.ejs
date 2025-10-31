@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
 <header>
   <h1><%= dadosBasicos.nomeCompleto %></h1>
   <nav>
@@ -22,16 +23,29 @@
 </header>
 
 <main>
-  <!-- Apresentação -->
-  <section id="apresentacao">
-    <img src="/img/fotogustavo.jpg" alt="Minha Foto">
-    <h1><%= dadosBasicos.nomeCompleto %></h1>
-    <h3><%= dadosBasicos.cargo %></h3>
-    <p><strong>Email:</strong> <%= dadosBasicos.email %></p>
-    <p><strong>Telefone:</strong> <%= dadosBasicos.telefone %></p>
-    <p><strong>Localização:</strong> <%= dadosBasicos.localizacao %></p>
-    <p class="biografia-texto"><strong>Biografia:</strong> <%= dadosBasicos.biografia %></p>
-  </section>
+  
+<section id="apresentacao">
+  <div class="flip-container" id="flip-container">
+    <div class="flip-card">
+      <!-- Frente: Pokémon -->
+      <div class="flip-front">
+        <img src="/img/pokemon.jpg" alt="Quem é esse Pokémon?">
+      </div>
+      <!-- Verso: Sua foto -->
+      <div class="flip-back">
+        <img src="/img/fotogustavo.jpg" alt="Foto de <%= dadosBasicos.nomeCompleto %>">
+      </div>
+    </div>
+  </div>
+
+  <h1><%= dadosBasicos.nomeCompleto %></h1>
+  <h3><%= dadosBasicos.cargo %></h3>
+  <p><strong>Email:</strong> <%= dadosBasicos.email %></p>
+  <p><strong>Telefone:</strong> <%= dadosBasicos.telefone %></p>
+  <p><strong>Localização:</strong> <%= dadosBasicos.localizacao %></p>
+  <p class="biografia-texto"><strong>Biografia:</strong> <%= dadosBasicos.biografia %></p>
+</section>
+
 
   <!-- Formação Acadêmica -->
   <section id="formacao">
@@ -72,32 +86,32 @@
   </section>
 
   <!-- Projetos -->
- <section id="projetos">
-  <h2>Projetos</h2>
-  <div class="card-container">
-    <% projetos.forEach(p => { %>
-      <div class="card">
-        <h3><%= p.nome %></h3>
-        <p><%= p.descricao %></p>
+  <section id="projetos">
+    <h2>Projetos</h2>
+    <div class="card-container">
+      <% projetos.forEach(p => { %>
+        <div class="card">
+          <h3><%= p.nome %></h3>
+          <p><%= p.descricao %></p>
 
-        <% if (p.tecnologias && p.tecnologias.length) { %>
-          <div class="tag-container">
-            <span class="tag-label">Tecnologias:</span>
-            <% p.tecnologias.forEach(t => { %>
-              <span class="tag"><%= t %></span>
-            <% }) %>
-          </div>
-        <% } %>
+          <% if (p.tecnologias && p.tecnologias.length) { %>
+            <div class="tag-container">
+              <span class="tag-label">Tecnologias:</span>
+              <% p.tecnologias.forEach(t => { %>
+                <span class="tag"><%= t %></span>
+              <% }) %>
+            </div>
+          <% } %>
 
-        <% if (p.link) { %>
-          <a href="<%= p.link %>" target="_blank">Ver projeto</a>
-        <% } else if (p.link_repositorio) { %>
-          <a href="<%= p.link_repositorio %>" target="_blank">Ver código</a>
-        <% } %>
-      </div>
-    <% }) %>
-  </div>
-</section>
+          <% if (p.link) { %>
+            <a href="<%= p.link %>" target="_blank">Ver projeto</a>
+          <% } else if (p.link_repositorio) { %>
+            <a href="<%= p.link_repositorio %>" target="_blank">Ver código</a>
+          <% } %>
+        </div>
+      <% }) %>
+    </div>
+  </section>
 
   <!-- Competências -->
   <section id="competencias">
@@ -158,6 +172,16 @@
 <footer>
   <p>&copy; <%= new Date().getFullYear() %> <%= dadosBasicos.nomeCompleto %>.</p>
 </footer>
+
+<script>
+  const flipContainer = document.getElementById('flip-container');
+  const flipCard = flipContainer.querySelector('.flip-card');
+
+  // Toggle flip no click (funciona em mobile)
+  flipContainer.addEventListener('click', () => {
+    flipCard.classList.toggle('active');
+  });
+</script>
 
 </body>
 </html>
