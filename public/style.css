@@ -5,17 +5,6 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: 'Inter', Arial, sans-serif;
-  line-height: 1.6;
-  background-color: #0b111e;
-  color: #f0f0f0;
-  padding-top: 70px;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
 /* Variáveis de cores */
 :root {
   --primary-color: #007bff;
@@ -24,6 +13,18 @@ body {
   --text-medium: #a0a0a0;
   --bg-card: #141d2e;
   --border-card: #007bff50;
+}
+
+/* Body */
+body {
+  font-family: 'Inter', Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #0b111e;
+  color: #f0f0f0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding-top: 70px; /* necessário só para desktop */
 }
 
 /* Links */
@@ -116,6 +117,7 @@ h3 {
   border-left: 5px solid var(--primary-color);
 }
 
+/* Flip card */
 .flip-container {
   perspective: 1000px;
   width: 150px;
@@ -132,14 +134,12 @@ h3 {
   cursor: pointer;
 }
 
-/* Hover para desktop */
 @media (hover: hover) {
   .flip-container:hover .flip-card {
     transform: rotateY(180deg);
   }
 }
 
-/* Frente e verso */
 .flip-front, .flip-back {
   position: absolute;
   width: 100%;
@@ -161,11 +161,9 @@ h3 {
   transform: rotateY(180deg);
 }
 
-/* Classe para click */
 .flip-card.active {
   transform: rotateY(180deg);
 }
-
 
 /* Apresentação textos */
 #apresentacao h1 {
@@ -282,9 +280,46 @@ footer {
   font-size: 0.9em;
 }
 
+/* Ajustes para mobile */
 @media (max-width: 768px) {
+  body {
+    padding-top: 0; /* remove espaço do header fixo */
+  }
+
   header {
     position: static;
-    box-shadow: none; /* opcional, remove sombra fixa */
+    box-shadow: none;
+  }
+
+  main {
+    margin: 20px auto 40px auto;
+    padding: 0 15px;
+  }
+
+  #apresentacao {
+    padding: 30px 20px;
+    margin: 20px auto;
+  }
+
+  h2 {
+    font-size: 2em;
+    margin: 30px 0 20px;
+  }
+
+  h3 {
+    font-size: 1.2em;
+  }
+
+  .flip-container {
+    width: 120px;
+    height: 120px;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  .social-links a {
+    font-size: 2em;
   }
 }
